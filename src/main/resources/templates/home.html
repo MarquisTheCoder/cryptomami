@@ -13,5 +13,26 @@
 	
 <body>
 	<nav th:replace="partials :: navbar-partial"></nav>
+<!--	<section th:replace="partials :: modal"></section>-->
+	<section id="login-modal" th:class="login-controller login-modal-background gone">
+		<div id="form-container" th:class="login-controller form-container gone">
+			<h2>Login</h2>
+			<form action="">
+				<div>
+					<label for="username">Username</label>
+					<input type="text" id="username" name="username">
+				</div>
+				<div>
+					<label for="password">Password</label>
+					<input type="text" id="password" name="password">
+				</div>
+				<div>
+					<button type="submit">Login</button>
+				</div>
+				
+			</form>
+		</div>
+		
+	</section>
 </body>
 </html>

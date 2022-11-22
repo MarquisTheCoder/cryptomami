@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scrollbar-width: none;
 }
 
 body{
@@ -22,6 +23,18 @@ nav{
     align-content: center;
 }
 
+nav li a{
+    color: white;
+    margin-top: 10px;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+nav li a:hover{
+    color: white;
+    font-weight: bold;
+    font-size: 1.4em;
+    text-decoration: underline;
+}
 nav img{
     width: 14vw;
     height: auto;
@@ -37,16 +50,45 @@ nav ul{
     color: #553957bb;
     padding: 10px 20px;
     border: none;
-    border-radius: 25%;
+    border-radius: 10%;
 }
+
 
 .nav-section--left{
     display: flex;
     width: 50%;
 }
-.nav-section--left ul{
 
-}
 .nav-section--right ul{
     margin-right: 4vw;
+}
+
+.gone{
+    display: none;
+}
+#login-modal-background{
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000055;
+    backdrop-filter: blur(2px);
+}
+.login-modal-background{
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container{
+    color: white;
+}
+.form-container form{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
