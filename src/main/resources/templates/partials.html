@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+	<head th:fragment="head-meta">
+	
+		<title>Gta Forums</title>
+		
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1, width=device-width">
+		
+		<!--bootstrap css import cdn-->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+			  integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+			  crossorigin="anonymous">
+		
+		<!-- Jquery cdn -->
+		<script src="https://code.jquery.com/jquery-3.6.1.js"
+				integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+				crossorigin="anonymous"></script>
+		
+		<!-- bootstrap js cdn -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+				integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+				crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="/css/app.css">
+	</head>
+
+	<nav th:fragment="navbar-partial">
+		<section class="nav-section--left">
+			<img src="/imgs/cryptomami_logo.png" alt="homescreen_logo">
+			<ul class="d-flex gap-3">
+				<li>
+					<a href="">Home</a>
+				</li>
+				<li>
+					<a href="">contact</a>
+				</li>
+				<li>
+					<a href="">about us</a>
+				</li>
+				<li>
+					<a href="">whats new?</a>
+				</li>
+				<li>
+					<a href="">mods</a>
+				</li>
+			</ul>
+		</section>
+		
+		<section class="nav-section--right">
+			<ul>
+				<li><button id="login-button">Login</button></li>
+			</ul>
+		</section>
+		
+	</nav>
+</html>
