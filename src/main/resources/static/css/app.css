@@ -1,72 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     scrollbar-width: none;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
-body{
-    background-color: #884E90;
-    width: 100vw;
-    height: 100vh;
-}
+
 
 nav{
     display: flex;
-    margin: 0 auto;
-    margin-top: 4vh;
-    padding: 0;
-    width: 95%;
+    /*margin: 4vh auto 0;*/
+    padding: 15px 50px;
+    width: 100vw;
+    background-color: white;
     justify-content: space-between;
     align-items: center;
     align-content: center;
+    margin-bottom: 40px;
+    font-family: 'Source Sans Pro', sans-serif;
+    box-shadow: 0 2px 4px -2px rgba(0,0,0,.2);
+
 }
 
 nav li a{
-    color: white;
-    margin-top: 10px;
     text-decoration: none;
     font-size: 1.2em;
+    color: #5A2F58;
 }
 nav li a:hover{
-    color: white;
-    font-weight: bold;
-    font-size: 1.4em;
+    color: #5A2F58;
     text-decoration: underline;
+    text-decoration-color: #B535AF;
+    text-decoration-thickness: .15em;
 }
-nav img{
-    width: 14vw;
-    height: auto;
-}
+
 nav ul{
-    align-content: center;
-    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
     list-style-type: none;
     color: white;
+    justify-content: space-evenly;
+    margin-bottom: 0!important;
+    align-items: center;
 }
+
+nav #nav-icon{
+    color: #B535AF;
+    font-size: 2.3em;
+    font-weight: 600;
+
+}
+nav #login-button{
+    justify-self: flex-end;
+}
+
 #login-button{
-    background: linear-gradient(#DCBBE0, #A682AA);
-    color: #553957bb;
+    background-color: transparent;
     padding: 10px 20px;
-    border: none;
+    border: 2px solid #5A2F58;
     border-radius: 10%;
 }
 
 
-.nav-section--left{
-    display: flex;
-    width: 50%;
-}
-
-.nav-section--right ul{
-    margin-right: 4vw;
-}
 
 .gone{
-    display: none;
+    display: none!important;
 }
-#login-modal-background{
+
+.login-modal-background{
     z-index: 1;
     position: fixed;
     top: 0;
@@ -76,6 +81,7 @@ nav ul{
     background-color: #00000055;
     backdrop-filter: blur(2px);
 }
+
 .login-modal-background{
     display: flex;
     justify-items: center;
@@ -86,7 +92,9 @@ nav ul{
 .form-container{
     color: white;
 }
+
 .form-container form{
+    z-index: 2;
     color: white;
     display: flex;
     flex-direction: column;

@@ -3,7 +3,7 @@
 
 	<head th:fragment="head-meta">
 	
-		<title>Gta Forums</title>
+		<title>Cryptomami - crypto forum of the future with validation</title>
 		
 		<meta charset="UTF-8">
 		<meta name="viewport" content="initial-scale=1, width=device-width">
@@ -22,39 +22,32 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
 				integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
 				crossorigin="anonymous"></script>
+		
 		<script src="/js/modal.js"></script>
 		<link rel="stylesheet" href="/css/app.css">
-	</head>
-
-	<nav th:fragment="navbar-partial">
-		<section class="nav-section--left">
-			<img src="/imgs/cryptomami_logo.png" alt="homescreen_logo">
-			<ul class="d-flex gap-3">
-				<li>
-					<a href="">Home</a>
-				</li>
-				<li>
-					<a href="">contact</a>
-				</li>
-				<li>
-					<a href="">about us</a>
-				</li>
-				<li>
-					<a href="">whats new?</a>
-				</li>
-				<li>
-					<a href="">mods</a>
-				</li>
-			</ul>
-		</section>
+		<link rel="stylesheet" href="/css/body.css">
 		
-		<section class="nav-section--right">
-			<ul>
-				<li>
-					<button id="login-button">Login</button>
-				</li>
-			</ul>
-		</section>
+	</head>
+	
+	<nav th:fragment="navbar-partial">
+		<h2 id="nav-icon">cryptomami</h2>
+		
+		<ul >
+			<li>
+				<a href="">contact</a>
+			</li>
+			<li>
+				<a href="">about us</a>
+			</li>
+			<li>
+				<a href="">whats new?</a>
+			</li>
+			<li>
+				<a href="">mods</a>
+			</li>
+			
+		</ul>
+		<button id="login-button">Login</button>
 	</nav>
 		
 </html>

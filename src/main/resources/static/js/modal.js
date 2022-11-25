@@ -9,11 +9,21 @@
  File Description:
  */
 
-
-(function () {
-     alert('testing import')
-     $('#login-button').on('click', ()=>{
-          alert('clicked')
-        $('.login-controller').toggleClass('gone');
+window.onload = () =>{
+     
+     let loginControllers = document.querySelectorAll(".login-controller")
+     let loginButton = document.querySelector('#login-button')
+     let modalBackgroundBlurred = document.querySelector('.login-modal-background')
+     function toggleModal(){
+          loginControllers.forEach(x => {
+               x.classList.toggle("gone");
+          })
+     }
+     loginButton.addEventListener("click", ()=> {
+          toggleModal();
      });
-})();
+     
+     modalBackgroundBlurred.addEventListener("click", ()=>{
+          toggleModal();
+     })
+}
