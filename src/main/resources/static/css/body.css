@@ -8,11 +8,39 @@ body{
     width: 100vw;
     height: 100vh;
 }
+
 .main{
     margin-top: 10vh;
 }
 
 .main-section--hero{
-    width: 25vw;
+    background-color: #1F013D99;
+    backdrop-filter: blur(4px);
+    padding: 40px 40px;
+    margin: 6vh 10vw;
+    width: 34vw;
     height: auto;
+    color: #E2DBFFDE;
+    box-shadow: 2px 2px 25px 1px rgba(0,0,0,0.76);
+    -webkit-box-shadow: 2px 2px 25px 1px rgba(0,0,0,0.76);
+    -moz-box-shadow: 2px 2px 25px 1px rgba(0,0,0,0.76);
+}
+
+.main-button{
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 1.4em;
+}
+
+.main-button-abs{
+    background-color: transparent;
+    backdrop-filter: blur(8px);
+    border: 1px #FB6FE2 solid;
+    color: #FB6FE2;
+}
+
+.main-button-lnm{
+    background-color: #B535AF;
+    color: #1F013D;
+    border: 1px #5A2F58 solid;
 }

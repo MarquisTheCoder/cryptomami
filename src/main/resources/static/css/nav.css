@@ -1,0 +1,79 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scrollbar-width: none;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+nav{
+    font-family: 'Source Sans Pro', sans-serif;
+    box-shadow: 0 2px 8px -2px #FA8CFCaa;
+    justify-content: space-between;
+    background-color: #060043dd;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 15px 50px;
+    display: flex;
+    width: 100vw;
+}
+
+nav li a{
+    font-family: 'Press Start 2P', cursive;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #7D1469;
+}
+
+nav li a:hover{
+    text-decoration-thickness: .15em;
+    text-decoration-color: #B535AF;
+    text-decoration: underline;
+    color: #5A2F58;
+}
+
+nav ul{
+    justify-content: space-evenly;
+    margin-bottom: 0!important;
+    list-style-type: none;
+    align-items: center;
+    display: flex;
+    color: white;
+    height: 100%;
+    width: 100%;
+}
+
+nav #nav-icon{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #FB6FE2;
+}
+
+nav #login-button{
+    justify-self: flex-end;
+}
+
+#login-button{
+    font-family: 'Press Start 2P', cursive;
+    background-color: transparent;
+    border: 2px solid #5A2F58;
+    padding: 10px 20px;
+    border-radius: 10%;
+    font-size: 1em;
+    color: #FB6FE2;
+}
+
+#login-button:hover{
+    background-color:#FB6FE2;
+    color: #5A2F58;
+}
+
+
+
