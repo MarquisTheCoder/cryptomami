@@ -32,8 +32,8 @@ nav li a{
 }
 
 nav li a:hover{
-    text-decoration-thickness: .15em;
-    text-decoration-color: #B535AF;
+    text-decoration-thickness: .15em!important;
+    text-decoration-color: #B535AF!important;
     text-decoration: underline;
     color: #5A2F58;
 }

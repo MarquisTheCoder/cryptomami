@@ -24,5 +24,5 @@ public class Post {
     @JoinColumn (name = "user_id")
     private User user;
 
-    @OneToOne Post post;
+    @OneToOne Post parent_post;
 }
