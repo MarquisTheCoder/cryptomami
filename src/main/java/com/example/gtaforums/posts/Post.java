@@ -4,6 +4,7 @@ import com.example.gtaforums.users.User;
 import javax.persistence.*;
 import lombok.*;
 import java.sql.Date;
+import java.sql.Timestamp;
 
 @Entity
 @Data
@@ -18,9 +19,9 @@ public class Post {
 
     @Column private String title;
     @Column(length = 1000) private String content;
-    @Column private Date timestamp;
+    @Column private Timestamp timestamp;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL )
     @JoinColumn (name = "user_id")
     private User user;
 
