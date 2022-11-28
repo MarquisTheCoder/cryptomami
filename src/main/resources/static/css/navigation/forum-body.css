@@ -3,9 +3,11 @@
     padding: 0;
     margin: 0;
 }
+
 body{
     height: 100%;
 }
+
 main{
     height: 100%;
     display: flex;
@@ -20,7 +22,6 @@ main section{
     scrollbar-width: none;
 }
 
-
 .chat{
     background-color: #000F5Fbb;
     border-radius: 25px;
@@ -28,15 +29,17 @@ main section{
     overflow: scroll;
     padding: 25px 50px;
 }
+
 .chat-container{
     height: 100%;
     width: 100%;
     min-height: 80%;
-    max-height: 550px;
+    max-height: 500px;
     scrollbar-width: none;
     min-width: 80%;
     overflow: scroll;
 }
+
 .chat-container .post{
     min-width: 150px;
     min-height: 120px;
@@ -56,11 +59,18 @@ main section{
     list-style-type: none;
     gap: 20px;
 }
+
 footer{
     padding: 25px 50px;
     position: fixed;
     bottom: 0;
     left: 0;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    align-content: center;
 }
 
 footer .text-input{
@@ -72,6 +82,7 @@ footer .text-input{
     padding: 0px 10px;
 
 }
+
 footer input{
     margin-right: 10px;
     width: 100px;
@@ -82,14 +93,17 @@ footer input{
     color: #B535AF;
     cursor: pointer;
 }
+
 .post{
     position: relative;
 }
+
 .options{
     position: absolute;
     bottom: 10px;
     right: 20px;
 }
+
 .options button{
     background-color: transparent;
     border: #0CACEC solid 0px;
