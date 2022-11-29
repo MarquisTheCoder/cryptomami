@@ -37,7 +37,12 @@ public class ForumController {
 
     @PostMapping()
     private String post(@ModelAttribute Post post){
+
         post.setTimestamp( new Timestamp(new Date().getTime()));
+
+        //hard-coding the first user in the database to all post
+        //that are sent to the server before the implementation of
+        //authentication
         post.setUser(userRepository.findAll().get(0));
         postRepository.save(post);
         return "redirect:/forum";
@@ -47,9 +52,15 @@ public class ForumController {
     @ResponseBody
     private String postReplies(@PathVariable String id) throws JsonProcessingException {
 
+        //gets all the replies of a given post via the post id
         ArrayList<Post> children = postRepository.findChildrenByParent(Long.parseLong(id));
+
+        //holds all PostJson objects for later conversion
         ArrayList<PostJson> childArray = new ArrayList<>();
 
+        //converts the Post Entity into a PostJson object and so it
+        //can be mapped and converted correctly by the jackson object
+        //mapper
         children.forEach(child ->{
            PostJson post = PostJson.builder()
                    .parentId(Long.parseLong(id))
@@ -60,9 +71,14 @@ public class ForumController {
                    .build();
            childArray.add(post);
         });
+
+        //object mapper turns the current PostJson object into a json object
+        //to be sent to the client which is being fetched in our reply.js
+        //when the user clicks the 'show replies' button
         return (new ObjectMapper()
                 .writeValueAsString(childArray));
     }
+
     @PostMapping("/{id}/post")
     private String post(@RequestParam String title,
                         @RequestParam String content,
