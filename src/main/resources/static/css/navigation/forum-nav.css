@@ -37,9 +37,9 @@ nav li a:hover{
     text-decoration: underline;
     color: #5A2F58;
 }
-nav #nav-icon{
+nav #nav-icon a{
     font-family: 'Press Start 2P', cursive;
-    font-size: 1.4em;
     font-weight: 600;
     color: #FB6FE2;
+    text-decoration: none;
 }

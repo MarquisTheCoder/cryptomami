@@ -27,7 +27,7 @@
 				
 				<div class="chat-container">
 					<div th:each="post : ${allpost}">
-						<div class="post">
+						<div class="post" th:data-post-id="${post.getId()}">
 							<h3 th:text="${post.getTitle()}"></h3>
 							
 							<div class="title">
@@ -49,10 +49,12 @@
 								</ul>
 							</div>
 							
-							<form class="hide reply-forum" action="">
-								<input type="text">
-								<input type="text">
-								<input type="submit" value="Post">
+							<form class="hide reply-forum"
+							      th:method="post"
+							      th:action="@{/forum/__${post.getId()}__/post} ">
+								<input class="reply-input" type="text" name="title" th:placeholder="title">
+								<input class="reply-input" type="text" name="content" th:placeholder="content">
+								<input class="reply-submit" type="submit" value="Post">
 							</form>
 						</div>
 						

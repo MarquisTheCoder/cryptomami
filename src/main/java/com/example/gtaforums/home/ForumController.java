@@ -43,4 +43,19 @@ public class ForumController {
         return "redirect:/forum";
     }
 
+    @PostMapping("/{id}/post")
+    private String post(@RequestParam String title,
+                        @RequestParam String content,
+                        @PathVariable String id){
+        //creates a post object and saves the reply post to the database with a hardcoded user
+        Post replyPost = Post.builder()
+                .parent_post(postRepository.getReferenceById(Long.parseLong(id)))
+                .user(userRepository.findAll().get(0))
+                .title(title)
+                .content(content)
+                .build();
+        //save the post to the connecting MySql database via the JPA
+        postRepository.save(replyPost);
+        return "redirect:/forum";
+    }
 }

@@ -17,4 +17,5 @@ $(function(){
                .children(".reply-forum")
                .toggleClass("hide")
      })
+     
 });

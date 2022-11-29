@@ -1,3 +1,25 @@
 .hide{
     display: none;
 }
+
+.reply-forum{
+    position: absolute;
+    bottom: -35px;
+    right: 20px;
+}
+.reply-forum .reply-input{
+    background-color: #1F013D;
+    border-radius: 25px;
+    border: #0CACEC solid 1px;
+    padding: 0px 20px;
+    color: #B535AF;
+}
+
+.reply-forum .reply-submit{
+    background-color: transparent;
+    border-radius: 25px;
+    border: #0CACEC solid 1px;
+    color: #0CACEC;
+    cursor: pointer;
+    padding: 4px 20px;
+}
