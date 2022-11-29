@@ -6,6 +6,7 @@ import com.example.gtaforums.posts.PostRepository;
 import com.example.gtaforums.users.User;
 import com.example.gtaforums.users.UserRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,13 +25,8 @@ import java.util.Optional;
 @RequestMapping("/forum")
 public class ForumController {
 
-    private PostRepository postRepository;
-    private UserRepository userRepository;
-    public ForumController(PostRepository postRepository,
-                           UserRepository userRepository){
-        this.userRepository = userRepository;
-        this.postRepository = postRepository;
-    }
+    @Autowired private PostRepository postRepository;
+    @Autowired private UserRepository userRepository;
 
     @GetMapping()
     private String forum(Model model){
@@ -41,10 +37,8 @@ public class ForumController {
 
     @PostMapping()
     private String post(@ModelAttribute Post post){
-        User user = userRepository.findAll().get(0);
-        Date date = new Date();
-        post.setTimestamp( new Timestamp(date.getTime()));
-        post.setUser(user);
+        post.setTimestamp( new Timestamp(new Date().getTime()));
+        post.setUser(userRepository.findAll().get(0));
         postRepository.save(post);
         return "redirect:/forum";
     }
@@ -53,8 +47,8 @@ public class ForumController {
     @ResponseBody
     private String postReplies(@PathVariable String id) throws JsonProcessingException {
 
-        ArrayList<PostJson> childArray = new ArrayList<>();
         ArrayList<Post> children = postRepository.findChildrenByParent(Long.parseLong(id));
+        ArrayList<PostJson> childArray = new ArrayList<>();
 
         children.forEach(child ->{
            PostJson post = PostJson.builder()
@@ -66,7 +60,8 @@ public class ForumController {
                    .build();
            childArray.add(post);
         });
-        return new ObjectMapper().writeValueAsString(childArray);
+        return (new ObjectMapper()
+                .writeValueAsString(childArray));
     }
     @PostMapping("/{id}/post")
     private String post(@RequestParam String title,
