@@ -24,5 +24,8 @@ public class Post {
     @ManyToOne(cascade = CascadeType.ALL )
     @JoinColumn (name = "user_id")
     private User user;
-    @OneToOne Post parent_post;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "parent_post_id")
+    Post parent_post;
 }

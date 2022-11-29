@@ -110,3 +110,21 @@ footer input{
     color: #0CACEC;
     cursor: pointer;
 }
+
+.reply{
+    margin: 20px 0 0 70px;
+    padding: 20px 50px;
+    border: #0CACEC solid 1px;
+    border-radius: 25px;
+    color: #0CACEC;
+}
+.reply hr{
+    color: #0CACEC55;
+    height: 1px;
+}
+.reply h4{
+    margin-bottom: 5px;
+}
+.reply p{
+    margin-top: 10px;
+}
