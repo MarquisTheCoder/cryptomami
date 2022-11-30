@@ -110,7 +110,9 @@ footer input{
     color: #0CACEC;
     cursor: pointer;
 }
-
+.replies{
+    border-left: dashed #FB6FE244 2px;
+}
 .reply{
     margin: 20px 0 0 70px;
     padding: 20px 50px;
@@ -123,7 +125,11 @@ footer input{
     height: 1px;
 }
 .reply h4{
+    color: #FB6FE2bb;
     margin-bottom: 5px;
+    padding: 4px 10px;
+    background-color: #1F013D;
+    border-radius: 15px;
 }
 .reply p{
     margin-top: 10px;

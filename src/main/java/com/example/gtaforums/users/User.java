@@ -1,8 +1,10 @@
 package com.example.gtaforums.users;
 
 import com.example.gtaforums.posts.Post;
+import com.sun.istack.NotNull;
 import lombok.*;
 import org.hibernate.Hibernate;
+import org.springframework.lang.NonNull;
 
 import javax.persistence.*;
 import java.util.List;

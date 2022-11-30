@@ -40,12 +40,13 @@ $(function(){
                fetch(`/forum/${postId}/post`)
                     .then((response) => response.json())
                     .then((data) =>{
-                    data.forEach(hash =>
-                         $(repliesSection).append(`
-                         <div class="reply">
-                             <h4>${hash.title}</h4><hr>
-                             <p>${hash.content}</p>
-                         </div>`))
+                         data.forEach(hash =>{
+                              $(repliesSection).append(`
+                              <div class="reply">
+                                  <h4>${hash.title}</h4><hr>
+                                  <p>${hash.content}</p>
+                              </div>`)
+                         })
                     });
           }else{
                $(repliesSection).html("");

@@ -2,8 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 	<head>
-		
-		<title>cryptomami</title>
+		<title>cryptomami - crypto forum of the future </title>
 		
 		<meta charset="UTF-8">
 		<meta name="viewport" content="initial-scale=1, width=device-width">
@@ -11,25 +10,23 @@
 		<link rel="stylesheet" href="/css/navigation/forum-nav.css">
 		<link rel="stylesheet" href="/css/navigation/forum-body.css">
 		<link rel="stylesheet" href="/css/navigation/forum-reply.css">
-		
 		<script src="https://code.jquery.com/jquery-3.6.1.js"
 		        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
 		        crossorigin="anonymous"></script>
 		
-		
 		<script src="/js/reply.js"></script>
+		
 	</head>
-	
 	<body>
+	
 		<header th:replace="navigation/forum-partials :: forum-navbar-partial-lo"></header>
+		
 		<main>
+			
 			<section class="chat">
-				
 				<div class="chat-container">
 					<div th:each="post : ${allpost}">
 						<div class="post-container">
-						
-						
 						<div class="post" th:data-post-id="${post.getId()}">
 							<h3 th:text="${post.getTitle()}">
 							</h3>
@@ -77,6 +74,12 @@
 				<input class="text-input" type="text"  id="content" name="content" th:field="*{content}" placeholder="post content">
 				<input type="submit" value="Post">
 			</form>
+			
+			<ul>
+				<li>Test</li>
+				<li>test</li>
+				<li>Tets</li>
+			</ul>
 		</footer>
 	</body>
 </html>

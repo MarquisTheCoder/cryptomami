@@ -9,5 +9,4 @@ public class GtaForumsApplication {
     public static void main(String[] args) {
         SpringApplication.run(GtaForumsApplication.class, args);
     }
-
 }

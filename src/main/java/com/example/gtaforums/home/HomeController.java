@@ -5,10 +5,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+
+//this Controller is basically used for the homepage of the website
+//it somewhat represents the root of the website
 @Controller
 @RequestMapping("/")
 public class HomeController {
-
     @GetMapping()
     private String home(){
         return "home";
@@ -24,5 +26,4 @@ public class HomeController {
     private @ResponseBody String test(){
         return "This is a test";
     }
-
 }

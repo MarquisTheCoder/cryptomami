@@ -37,10 +37,24 @@ body{
     backdrop-filter: blur(8px);
     border: 1px #FB6FE2 solid;
     color: #FB6FE2;
+    transition: all 0.3s ease-in;
+}
+.main-button-abs:hover{
+    background-color: #B535AF58;
+    color: #FB6FE2;
+    border: none;
 }
 
 .main-button-lnm{
     background-color: #B535AF;
     color: #1F013D;
     border: 1px #5A2F58 solid;
+    transition: all 0.3s ease-in;
+}
+
+.main-button-lnm:hover{
+    background-color: #1F013D58;
+    backdrop-filter: blur(8px);
+    color: #B535AF;
+    border-color: #B535AF;
 }

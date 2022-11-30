@@ -1,0 +1,13 @@
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 10vh;
+    width: 100vw;
+    background-color: red;
+}
+
+footer ul{
+    display: flex;
+}

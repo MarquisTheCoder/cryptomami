@@ -1,4 +1,4 @@
-package com.example.gtaforums.home;
+package com.example.gtaforums.forum;
 
 import com.example.gtaforums.posts.Post;
 import com.example.gtaforums.posts.PostJson;
@@ -83,7 +83,9 @@ public class ForumController {
     private String post(@RequestParam String title,
                         @RequestParam String content,
                         @PathVariable String id){
+
         Date date = new Date();
+
         //creates a post object and saves the reply post to the database with a hardcoded user
         Post replyPost = Post.builder()
                 .parent_post(postRepository.getReferenceById(Long.parseLong(id)))
