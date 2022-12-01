@@ -6,10 +6,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/post")
-public class PostController {
+public class PostController{
     @GetMapping("/create")
     public String home(){
         return "home";
     }
-
 }
