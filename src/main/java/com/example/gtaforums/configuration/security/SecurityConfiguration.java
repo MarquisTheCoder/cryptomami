@@ -15,13 +15,13 @@ public class SecurityConfiguration{
     SecurityFilterChain customSecurityFilterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests()
                 .antMatchers("/forum").authenticated()
-                .antMatchers("/home", "/register").permitAll()
-                .and().formLogin().loginPage("/login").defaultSuccessUrl("/forum")
-                .and().logout()
-                .and().httpBasic();
-
+                .antMatchers("/","/home", "/register").permitAll()
+                    .and().formLogin().loginPage("/login").defaultSuccessUrl("/forum")
+                    .and().logout()
+                    .and().httpBasic();
         http.formLogin();
         http.httpBasic();
+
         return http.build();
     }
 

@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class HomeController {
     @GetMapping()
     private String home(){
-        return "home";
+        return "homepage/home";
     }
 
     //testing the home controller

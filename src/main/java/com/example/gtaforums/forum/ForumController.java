@@ -28,7 +28,7 @@ public class ForumController {
     private String forum(Model model){
         model.addAttribute("post", new Post());
         model.addAttribute("allpost", postRepository.findParents());
-        return "navigation/forum";
+        return "forum/forum";
     }
 
     @PostMapping()

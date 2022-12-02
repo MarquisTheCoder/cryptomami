@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class AuthenticationController {
     @GetMapping()
     public String defaultLoginPage(){
-        return("navigation/login");
+        return("homepage/navigation/login");
     }
 }
