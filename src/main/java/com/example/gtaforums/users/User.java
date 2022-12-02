@@ -21,6 +21,5 @@ public class User {
     @Column(name = "id", nullable = false) private Long id;
     @Column(unique = true, nullable = false) private String username;
     @Column (nullable = false) private String password;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
-    private List<Post> post;
+    @Column private String cryptoAddress;
 }

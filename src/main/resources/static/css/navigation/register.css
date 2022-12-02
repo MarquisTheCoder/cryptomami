@@ -1,0 +1,73 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    min-width: 100vw;
+    background: url("../../imgs/aesthetic backgroun.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+main{
+    padding: 0;
+    margin: 0;
+    min-width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    height: 50vh;
+    padding: 20px 40px;
+    background-color: #1F013D99;
+    border: #FB6FE2 1px solid;
+    border-radius: 50px;
+}
+
+
+
+.form-container form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-container form .text-input{
+    background-color: #00000033;
+    border: #FB6FE2aa solid 1px;
+    border-radius: 25px;
+    color: #FB6FE2bb;
+    padding: 10px 15px;
+
+}
+
+form .button-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+form .button-container input{
+    background: #1F013D;
+    padding: 10px 20px;
+    font-weight: bolder;
+    color: #FB6FE288;
+    border: #7D1469 solid 2px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all .3s ease-in;
+}
+
+form .button-container input:hover{
+    background-color: #B535AF88;
+
+    color: #1F013D;
+}

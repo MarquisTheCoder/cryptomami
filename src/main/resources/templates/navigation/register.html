@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<!--
+    Creator: Deshawn Marquis, Williams
+    Github Profile: https://github.com/MarquisTheCoder
+    Date Created: 12/1/22
+    Time Created: 11:06 AM
+    File Name: register.html
+    -->
+<head>
+	
+	<title>cryptomami - register for the best crypto site on the internet </title>
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, width=device-width">
+	<link rel="stylesheet" href="/css/navigation/forum-nav.css">
+	<link rel="stylesheet" href="/css/navigation/register.css">
+</head>
+<body>
+	<header th:replace="navigation/forum-partials :: forum-navbar-partial-lo"></header>
+	<main>
+		<section class="form-container">
+			<form th:action="@{/register}" th:method="post" th:object="${user}">
+				<input class="text-input" type="text" th:field="*{username}" placeholder="Username">
+				<input class="text-input" type="password" th:field="*{password}" placeholder="Password">
+				<input class="text-input" type="text" th:field="*{cryptoAddress}" th:placeholder="Wallet address">
+				<div class="button-container">
+					<input type="submit" value="Request Membership">
+				</div>
+			</form>
+		</section>
+	</main>
+</body>
+</html>
