@@ -3,7 +3,6 @@ package com.example.gtaforums.forum;
 import com.example.gtaforums.posts.Post;
 import com.example.gtaforums.posts.PostJson;
 import com.example.gtaforums.posts.PostRepository;
-import com.example.gtaforums.users.User;
 import com.example.gtaforums.users.UserRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,12 +13,9 @@ import org.springframework.web.bind.annotation.*;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import java.sql.Time;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
-import java.util.Optional;
 
 @Controller
 @RequestMapping("/forum")
@@ -32,7 +28,7 @@ public class ForumController {
     private String forum(Model model){
         model.addAttribute("post", new Post());
         model.addAttribute("allpost", postRepository.findParents());
-        return "navigation/forum-logged-out";
+        return "navigation/forum";
     }
 
     @PostMapping()

@@ -10,6 +10,7 @@
 		<link rel="stylesheet" href="/css/navigation/forum-nav.css">
 		<link rel="stylesheet" href="/css/navigation/forum-body.css">
 		<link rel="stylesheet" href="/css/navigation/forum-reply.css">
+		<link rel="stylesheet" href="/css/navigation/forum-footer.css">
 		<script src="https://code.jquery.com/jquery-3.6.1.js"
 		        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
 		        crossorigin="anonymous"></script>
@@ -27,11 +28,11 @@
 				<div class="chat-container">
 					<div th:each="post : ${allpost}">
 						<div class="post-container">
-						<div class="post" th:data-post-id="${post.getId()}">
-							<h3 th:text="${post.getTitle()}">
-							</h3>
+						<div class="post" th:data-post-id="${post.getId()}" >
 							
+							<h3 th:text="${post.getTitle()}"></h3>
 							<div class="title">
+								<div th:if="${post.getId() == userId}"></div>
 								<ul>
 									<li><a href="">report</a></li>
 									<li><a href="">block</a></li>
@@ -59,6 +60,7 @@
 							</form>
 						</div>
 							<div class="replies"></div>
+							
 						</div>
 					</div>
 				</div>

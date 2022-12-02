@@ -22,6 +22,8 @@ public class Post {
     @Column(length = 1000) private String content;
     @Column private Timestamp timestamp;
 
+    @Column private int status;
+
     @ManyToOne(cascade = CascadeType.ALL )
     @JoinColumn (name = "user_id")
     private User user;
