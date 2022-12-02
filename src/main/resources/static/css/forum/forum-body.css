@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height: 100%;
+    background: url("../../imgs/aesthetic backgroun.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(4px);
+}
+
+main{
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+
