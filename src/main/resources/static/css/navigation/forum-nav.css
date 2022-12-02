@@ -8,18 +8,16 @@ body{
     background-color: #040033;
 }
 nav{
-    display: flex;
-    gap: 10em;
     font-family: 'Source Sans Pro', sans-serif;
     box-shadow: 0 2px 8px -2px #FA8CFCaa;
     justify-content: space-between;
     background-color: #060043dd;
-    align-content: center;
-    align-items: center;
-    margin-bottom: 40px;
     padding: 27px 50px;
     display: flex;
-    width: 100vw;
+    width: 356px;
+    height: 100vh;
+    gap: 10em;
+
 }
 nav ul{
     display: flex;

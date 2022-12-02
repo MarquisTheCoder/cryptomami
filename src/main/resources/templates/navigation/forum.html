@@ -70,18 +70,12 @@
 			
 			</section>
 		</main>
-		<footer>
-			<form th:action="@{/forum}" th:method="post" th:object="${post}">
-				<input class="text-input" type="text"  id="title" name="title" th:field="*{title}" placeholder="post title">
-				<input class="text-input" type="text"  id="content" name="content" th:field="*{content}" placeholder="post content">
-				<input type="submit" value="Post">
-			</form>
-			
-			<ul>
-				<li>Test</li>
-				<li>test</li>
-				<li>Tets</li>
-			</ul>
-		</footer>
+<!--		<footer class="none">-->
+<!--			<form class="none" th:action="@{/forum}" th:method="post" th:object="${post}">-->
+<!--				<input class="text-input" type="text"  id="title" name="title" th:field="*{title}" placeholder="post title">-->
+<!--				<input class="text-input" type="text"  id="content" name="content" th:field="*{content}" placeholder="post content">-->
+<!--				<input type="submit" value="Post">-->
+<!--			</form>-->
+<!--		</footer>-->
 	</body>
 </html>

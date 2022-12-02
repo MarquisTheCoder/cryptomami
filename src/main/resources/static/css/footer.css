@@ -10,3 +10,7 @@ footer{
 footer ul{
     display: flex;
 }
+
+.none{
+    display: none!important;
+}

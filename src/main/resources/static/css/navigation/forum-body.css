@@ -8,7 +8,7 @@ body{
     height: 100%;
     background: url("../../imgs/aesthetic backgroun.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100vw 100vh;
 }
 
 main{
@@ -34,10 +34,6 @@ main section{
 }
 
 .chat-container{
-    height: 100%;
-    width: 100%;
-    min-height: 80%;
-    max-height: 500px;
     scrollbar-width: none;
     min-width: 80%;
     overflow: scroll;
