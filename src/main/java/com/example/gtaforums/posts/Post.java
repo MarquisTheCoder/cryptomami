@@ -1,5 +1,6 @@
 package com.example.gtaforums.posts;
 
+import com.example.gtaforums.threads.Thread;
 import com.example.gtaforums.users.User;
 import javax.persistence.*;
 import lombok.*;
@@ -27,6 +28,10 @@ public class Post {
     @ManyToOne(cascade = CascadeType.ALL )
     @JoinColumn (name = "user_id")
     private User user;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "thread_id")
+    Thread parent_thread;
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "parent_post_id")

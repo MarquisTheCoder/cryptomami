@@ -1,4 +1,9 @@
 package com.example.gtaforums.threads;
 
-public interface ThreadRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface ThreadRepository extends JpaRepository<Thread, Long> {
+    Thread findById(long id);
 }

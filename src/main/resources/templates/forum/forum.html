@@ -14,68 +14,14 @@
 		<script src="https://code.jquery.com/jquery-3.6.1.js"
 		        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
 		        crossorigin="anonymous"></script>
-		
 		<script src="/js/reply.js"></script>
-		
 	</head>
 	<body>
 	
 		<header th:replace="forum/partials :: forum-navbar-partial-lo"></header>
 		
-		<main>
-			
-<!--			<section class="chat">-->
-<!--				<div class="chat-container">-->
-<!--					<div th:each="post : ${allpost}">-->
-<!--						<div class="post-container">-->
-<!--						<div class="post" th:data-post-id="${post.getId()}" >-->
-<!--							-->
-<!--							<h3 th:text="${post.getTitle()}"></h3>-->
-<!--							<div class="title">-->
-<!--								<div th:if="${post.getId() == userId}"></div>-->
-<!--								<ul>-->
-<!--									<li><a href="">report</a></li>-->
-<!--									<li><a href="">block</a></li>-->
-<!--									<li><a href="">like</a></li>-->
-<!--								</ul>-->
-<!--							</div>-->
-<!--							-->
-<!--							<div class="content">-->
-<!--								<h5 th:text="${post.getContent()}"></h5>-->
-<!--							</div>-->
-<!--							-->
-<!--							<div class="options">-->
-<!--								<ul class="replies">-->
-<!--									<li><button class="reply-button">reply</button></li>-->
-<!--									<li><button class="replies-button">replies</button></li>-->
-<!--								</ul>-->
-<!--							</div>-->
-<!--							-->
-<!--							<form class="hide reply-forum"-->
-<!--							      th:method="post"-->
-<!--							      th:action="@{/forum/__${post.getId()}__/post} ">-->
-<!--								<input class="reply-input" type="text" name="title" th:placeholder="title">-->
-<!--								<input class="reply-input" type="text" name="content" th:placeholder="content">-->
-<!--								<input class="reply-submit" type="submit" value="Post">-->
-<!--							</form>-->
-<!--						</div>-->
-<!--							<div class="replies"></div>-->
-<!--							-->
-<!--						</div>-->
-<!--					</div>-->
-<!--				</div>-->
-<!--			</section>-->
-<!--			<section class="vip">-->
-<!--&lt;!&ndash;				<div style="height:560px; background-color: #010B53; overflow:hidden; box-sizing: border-box; border: 1px solid #282E3B; border-radius: 4px; text-align: right; line-height:14px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #262B38;padding:1px;padding: 0px; margin: 0px; width: 100%;"><div style="height:540px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=chart&theme=dark&coin_id=859&pref_coin_id=1505" width="100%" height="536px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;line-height:14px;"></iframe></div><div style="color: #626B7F; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 2px 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;"><a href="https://coinlib.io" target="_blank" style="font-weight: 500; color: #626B7F; text-decoration:none; font-size:11px">Cryptocurrency Prices</a>&nbsp;by Coinlib</div></div>&ndash;&gt;-->
-<!--			-->
-<!--			</section>-->
+		<main class="global-state-container">
+				<section class="root-container"></section>
 		</main>
-<!--		<footer class="none">-->
-<!--			<form class="none" th:action="@{/forum}" th:method="post" th:object="${post}">-->
-<!--				<input class="text-input" type="text"  id="title" name="title" th:field="*{title}" placeholder="post title">-->
-<!--				<input class="text-input" type="text"  id="content" name="content" th:field="*{content}" placeholder="post content">-->
-<!--				<input type="submit" value="Post">-->
-<!--			</form>-->
-<!--		</footer>-->
 	</body>
 </html>

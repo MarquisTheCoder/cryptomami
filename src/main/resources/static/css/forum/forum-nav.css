@@ -1,43 +1,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-*{
+* {
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
+
 body{
     background-color: #040033;
+}
+header{
+    max-width: 356px;
+    padding: 0;
+    margin: 0;
 }
 nav{
     font-family: 'Source Sans Pro', sans-serif;
     box-shadow: 0 2px 8px -2px #FA8CFCaa;
     justify-content: space-between;
     background-color: #060043dd;
-    padding: 27px 50px;
     display: flex;
     width: 356px;
     height: 100vh;
     gap: 10em;
-
 }
+
+nav{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    align-content: center;
+}
+
 nav ul{
     display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+nav .profile-picture-wrapper{
+    display: flex;
+    justify-content: center;
+}
+nav .profile-picture{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+nav section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 100%;
+    justify-content: center;
+}
 
-}
-nav li a{
-    font-family: 'Press Start 2P', cursive;
-    text-decoration: none;
-    font-size: 1.2em;
-    color: #7D1469;
-}
-nav li a:hover{
-    text-decoration-thickness: .15em!important;
-    text-decoration-color: #B535AF!important;
-    text-decoration: underline;
-    color: #5A2F58;
-}
-nav #nav-icon a{
-    font-family: 'Press Start 2P', cursive;
-    font-weight: 600;
-    color: #FB6FE2;
-    text-decoration: none;
+nav section ul{
+    display: flex;
+    justify-content: center;
 }
