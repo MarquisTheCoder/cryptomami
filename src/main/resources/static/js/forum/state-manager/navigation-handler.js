@@ -14,5 +14,14 @@
      //making sure the starting page is the homepage
      globalForumStateManager.active("home")
      
+     //iterating through all selected page option and altering global state based on click
+     function createEventListenersForPage(pageList){
+          pageList.forEach(name => {
+               $(`.${name}-button`).click(() => {
+                    globalForumStateManager.active(name)
+               })
+          })
+     }
+     createEventListenersForPage(["home", "settings","threads","posts","stats"])
     
 })();
