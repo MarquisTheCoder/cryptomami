@@ -11,35 +11,47 @@
 		<link rel="stylesheet" href="/css/forum/forum-body.css">
 		<link rel="stylesheet" href="/css/forum/forum-reply.css">
 		<link rel="stylesheet" href="/css/forum/forum-footer.css">
+		
 		<script src="https://code.jquery.com/jquery-3.6.1.js"
 		        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
 		        crossorigin="anonymous"></script>
-		<script src="/js/reply.js"></script>
+			
+		
+        <!-- changes the dashboard state depending on currently selected nav item-->
+		
 	</head>
-	<body>
 	
+	<body>
 		<header th:replace="forum/partials :: forum-navbar-partial-lo"></header>
 		
 		<main class="global-state-container">
 				<section class="root-container">
 					
-					<section class="page home active" style="color: white ">
+					<section class="home page inactive" style="color: white ">
+						<h1>Home page</h1>
 					</section>
 					
-					<section class="page settings inactive"  style="background-color: red; color: white ">
+					<section class="settings page inactive"  style="color: white">
+						<h1>Settings page</h1>
 					</section>
 					
-					
-					<section class="page threads inactive">
+					<section class="threads page inactive" style="color: white">
+						<h1>Threads page</h1>
 					</section>
 					
-					<section class="page posts inactive">
+					<section class="posts page inactive" style="color: white">
+						<h1>Posts page</h1>
 					</section>
 					
-					<section class="page stats inactive">
+					<section class="stats page inactive" style="color: white">
+						<h1>Stats page</h1>
 					</section>
 					
 				</section>
 		</main>
+		
+		<script src="/js/forum/reply.js"></script>
+		<script src="/js/forum/state-manager/ForumStateManager.js"></script>
+		<script src="/js/forum/state-manager/navigation-handler.js"></script>
 	</body>
 </html>
