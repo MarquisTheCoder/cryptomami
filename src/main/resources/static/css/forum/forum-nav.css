@@ -96,3 +96,9 @@ nav ul button:hover{
 .item{
     flex: 2 1 auto;
 }
+
+.selected{
+    filter: invert(37%) sepia(24%) saturate(3742%) hue-rotate(274deg) brightness(96%) contrast(87%)!important;
+    width: 35px!important;
+    height: 35px!important;
+}

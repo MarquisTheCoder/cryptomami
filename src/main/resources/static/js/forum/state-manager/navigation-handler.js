@@ -17,8 +17,18 @@
      //iterating through all selected page option and altering global state based on click
      function createEventListenersForPage(pageList){
           pageList.forEach(name => {
-               $(`.${name}-button`).click(() => {
+               let className = `.${name}-button`
+               
+               $(className).click(function() {
+                    
                     globalForumStateManager.active(name)
+                    pageList.forEach(navName => {
+                         let nonClicked = `.${navName}-button`
+                         if(this.className != nonClicked ){
+                              $(nonClicked).children(".nav-img").removeClass("selected")
+                         }
+                    })
+                    $(this).children(".nav-img").addClass("selected")
                })
           })
      }
