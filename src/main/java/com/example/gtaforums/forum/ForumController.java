@@ -60,7 +60,6 @@ public class ForumController {
         children.forEach(child ->{
            PostJson post = PostJson.builder()
                    .parentId(Long.parseLong(id))
-                   .title(child.getTitle())
                    .content(child.getContent())
                    .id(child.getId())
                    .timestamp(child.getTimestamp())
@@ -86,7 +85,6 @@ public class ForumController {
         Post replyPost = Post.builder()
                 .parent_post(postRepository.getReferenceById(Long.parseLong(id)))
                 .user(userRepository.findAll().get(0))
-                .title(title)
                 .timestamp(new Timestamp(date.getTime()))
                 .content(content)
                 .build();

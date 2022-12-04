@@ -19,7 +19,6 @@ public class Post {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column private String title;
     @Column(length = 1000) private String content;
     @Column private Timestamp timestamp;
 

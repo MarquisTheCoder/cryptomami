@@ -11,6 +11,7 @@
 		<link rel="stylesheet" href="/css/forum/forum-body.css">
 		<link rel="stylesheet" href="/css/forum/forum-reply.css">
 		<link rel="stylesheet" href="/css/forum/forum-footer.css">
+		<link rel="stylesheet" href="/css/forum/pages/pages.css">
 		
 		<script src="https://code.jquery.com/jquery-3.6.1.js"
 		        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
@@ -28,23 +29,36 @@
 				<section class="root-container">
 					
 					<section class="home page inactive" style="color: white ">
-						<h1>Home page</h1>
+						<div class="page-container"></div>
 					</section>
 					
 					<section class="settings page inactive"  style="color: white">
-						<h1>Settings page</h1>
+						<div class="page-container"></div>
 					</section>
 					
 					<section class="threads page inactive" style="color: white">
-						<h1>Threads page</h1>
+						<div class="page-container"></div>
 					</section>
 					
 					<section class="posts page inactive" style="color: white">
-						<h1>Posts page</h1>
+						<div class="page-container">
+							<div class="my-post">
+								<div class="my-post-header">
+									<img src="/imgs/svg/camera-icon.png" alt="">
+								</div>
+								<div class="my-post-body">
+									<div th:each="post : ${allpost}">
+										<div class="post">
+										
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</section>
 					
 					<section class="stats page inactive" style="color: white">
-						<h1>Stats page</h1>
+						<div class=""></div>
 					</section>
 					
 				</section>

@@ -18,7 +18,6 @@
 	<link rel="stylesheet" href="/css/homepage/navigation/register.css">
 </head>
 <body>
-	<header th:replace="navigation/forum-partials :: forum-navbar-partial-lo"></header>
 	<main>
 		<section class="form-container">
 			<form th:action="@{/register}" th:method="post" th:object="${user}">

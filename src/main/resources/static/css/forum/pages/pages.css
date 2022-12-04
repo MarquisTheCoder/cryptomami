@@ -1,3 +1,47 @@
+
+
 .page{
-    display: flex;
+    /*background-color: #00000022;*/
+    height: 100%;
+    width: available;
+
 }
+.page-container{
+    height: inherit;
+    width: inherit;
+}
+
+/*Post page css rules*/
+.my-post{
+    width: 700px;
+    height: 500px;
+    background-color: #1F013D66;
+    border-radius: 30px;
+}
+
+.my-post .my-post-header{
+    border-radius: 25px 25px 0 0;
+    display: flex;
+    width: 100%;
+    padding: 2px 0;
+    justify-content: center;
+    background-color: #00000033;
+}
+
+.my-post-header img{
+    height: 50px;
+    width: 50px;
+    filter: invert(37%) sepia(24%) saturate(3742%) hue-rotate(274deg) brightness(96%) contrast(87%);
+    opacity: .9;
+}
+
+
+
+
+
+
+
+
+
+
+
