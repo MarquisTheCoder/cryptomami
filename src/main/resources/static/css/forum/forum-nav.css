@@ -20,18 +20,16 @@ nav{
     justify-content: space-between;
     background-color: #060043dd;
     display: flex;
-    width: 356px;
+    width: 75px;
     height: 100vh;
     gap: 10em;
 }
 
 nav{
-    display: flex;
     position: relative;
     flex-direction: column;
     color: white;
     align-items: center;
-    align-content: center;
 }
 
 nav ul{
@@ -45,9 +43,22 @@ nav .profile-picture-wrapper{
     justify-content: center;
 }
 nav .profile-picture{
-    height: 100px;
-    width: 100px;
+    position: absolute;
+    top: 40px;
+    left: 9px;
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
+    box-shadow: 0 2px 10px -2px #FA8CFCaa;
+}
+
+nav .nav-img{
+    width: 30px;
+    height: 30px;
+    filter: invert(31%) sepia(30%) saturate(3875%) hue-rotate(252deg) brightness(89%) contrast(86%);
+}
+nav .nav-img:hover{
+    filter: invert(13%) sepia(76%) saturate(3537%) hue-rotate(266deg) brightness(115%) contrast(107%);
 }
 nav section{
     display: flex;
@@ -60,4 +71,28 @@ nav section{
 nav section ul{
     display: flex;
     justify-content: center;
+    list-style-type: none;
+    gap: 10px;
+}
+
+nav ul button{
+    font-family: 'Press Start 2P', cursive;
+    font-weight: lighter;
+    color: #FB6FE2bb;
+    font-size: 2em;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+nav ul button:hover{
+    color: #5A2F58;
+}
+
+.nav-profile-section{
+}
+.nav-main-links{
+}
+
+.item{
+    flex: 2 1 auto;
 }
