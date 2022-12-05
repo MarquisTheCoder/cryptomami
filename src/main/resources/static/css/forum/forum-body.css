@@ -27,7 +27,7 @@ body{
     height: 90vh;
     width: 93vw;
     background-color: #040033bb;
-    border-radius: 4px;
+    border-radius: 20px;
     backdrop-filter: blur(90px);
     box-shadow: 0 2px 8px -2px #FA8CFCaa;
     padding: 75px;

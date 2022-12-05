@@ -75,10 +75,12 @@
 
 .my-post{
     max-height: 700px!important;
+    scrollbar-width: none;
     overflow: scroll;
 }
 .my-post-body {
     max-height: 700px!important;
+    scrollbar-width: none;
     overflow: scroll;
 }
 
