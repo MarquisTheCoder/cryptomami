@@ -1,5 +1,6 @@
 package com.example.gtaforums.posts;
 
+import com.example.gtaforums.users.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -12,4 +13,6 @@ public interface PostRepository extends JpaRepository<Post, Long> {
     List<Post> findParents();
     @Query(value = "Select p from Post p Where p.parent_post.id = :parentId")
     ArrayList<Post> findChildrenByParent(@Param("parentId") Long parentId);
+
+    ArrayList<Post> findPostsByUser(User user);
 }

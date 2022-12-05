@@ -27,6 +27,7 @@ public class UserController{
     @PostMapping()
     public String register(@ModelAttribute User user){
         user.setPassword(passwordEncoder.encode(user.getPassword()));
+        user.setProfileImg("/imgs/profile-imgs/default.jpg");
         userRepository.save(user);
         return "redirect:/login";
     }

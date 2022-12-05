@@ -6,8 +6,8 @@ import java.util.Collection;
 
 public class CryptomamiUserDetails extends User implements UserDetails {
 
-    public CryptomamiUserDetails(Long id, String username, String password, String cryptoAddress) {
-        super(id, username, password, cryptoAddress);
+    public CryptomamiUserDetails(Long id, String username, String password, String cryptoAddress, String profileaImg) {
+        super(id, username, password, cryptoAddress , profileaImg);
     }
 
     @Override

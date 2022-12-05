@@ -23,7 +23,28 @@
 	</head>
 	
 	<body>
-		<header th:replace="forum/partials :: forum-navbar-partial-lo"></header>
+		<header>
+			<nav class="main-nav">
+				<h2 id="nav-icon"></h2>
+				
+				<section class="nav-profile-section item">
+					<div class="profile-picture-wrapper ">
+						<img class="profile-picture" th:src="${user.getProfileImg()}" alt="">
+					</div>
+				</section>
+				
+				<section class="nav-main-links item">
+					<ul>
+						<li><button class="home-button"><img class="nav-img" src="/imgs/svg/home.svg" alt="home page"></button></li>
+						<li><button class="settings-button"><img class="nav-img" src="/imgs/svg/settings.svg" alt="settings page"></button></li>
+						<li><button class="posts-button"><img class="nav-img" src="/imgs/svg/threads.svg" alt="threads page"></button></li>
+						<li><button class="threads-button"><img class="nav-img" src="/imgs/svg/posts.svg" alt="posts page"></button></li>
+						<li><button class="stats-button"><img class="nav-img" src="/imgs/svg/stats.svg" alt="stats page"></button></li>
+					</ul>
+				</section>
+			</nav>
+		
+		</header>
 		
 		<main class="global-state-container">
 				<section class="root-container">
@@ -44,17 +65,43 @@
 						<div class="page-container">
 							<div class="my-post">
 								<div class="my-post-header">
-									<img src="/imgs/svg/camera-icon.png" alt="">
+									<div class="img-container">
+										<img src="/imgs/svg/camera-icon.png" alt="">
+									</div>
+									
 								</div>
 								<div class="my-post-body">
-									<div th:each="post : ${allpost}">
-										<div class="post">
-										
+									<div th:each="post : ${allposts}">
+										<div class="post" th:data-id="${post.getStatus()}">
+											<div class="user-info">
+												<div class="left">
+													<img class="posts-pro-img" th:src="${post.getUser().getProfileImg()}" alt="user image">
+													<h4 class="posts-username" th:text="${post.getUser().getUsername()}"></h4>
+												</div>
+												
+												<div class="post-options">
+													<ul>
+														<li><img class="edit-my-post" src="/imgs/svg/note.png" alt=""></li>
+														<li><img class="destroy-my-post" src="/imgs/svg/delete-fire.png" alt=""></li>
+													</ul>
+												</div>
+											</div>
+											
+											<div class="content">
+												<p th:text="${post.getContent()}"></p>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
+							
+							<div class="edit-container">
+								<div class="edit-header">
+									<img src="/imgs/svg/edit.png" alt="">
+								</div>
+							</div>
 						</div>
+						
 					</section>
 					
 					<section class="stats page inactive" style="color: white">
@@ -67,5 +114,6 @@
 		<script src="/js/forum/reply.js"></script>
 		<script src="/js/forum/state-manager/ForumStateManager.js"></script>
 		<script src="/js/forum/state-manager/navigation-handler.js"></script>
+		<script src="/js/forum/posts.js"></script>
 	</body>
 </html>

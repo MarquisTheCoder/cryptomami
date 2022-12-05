@@ -3,10 +3,12 @@ package com.example.gtaforums.forum;
 import com.example.gtaforums.posts.Post;
 import com.example.gtaforums.posts.PostJson;
 import com.example.gtaforums.posts.PostRepository;
+import com.example.gtaforums.users.User;
 import com.example.gtaforums.users.UserRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -26,8 +28,12 @@ public class ForumController {
 
     @GetMapping()
     private String forum(Model model){
+        User loggedInUser = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        User thisUser = userRepository.getReferenceById(loggedInUser.getId());
         model.addAttribute("post", new Post());
-        model.addAttribute("allpost", postRepository.findParents());
+        model.addAttribute("user", thisUser);
+        model.addAttribute("allposts", postRepository.findAll());
+        model.addAttribute("myPosts", postRepository.findPostsByUser(thisUser));
         return "forum/forum";
     }
 
