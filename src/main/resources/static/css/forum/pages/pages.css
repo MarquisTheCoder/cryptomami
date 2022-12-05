@@ -128,6 +128,37 @@
     opacity: .9;
 }
 
+.edit-body{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.edit-body .content-box{
+    height: 325px;
+    width: 100%;
+    background-color: #04003355;
+    padding: 20px;
+    border: none;
+    border-radius: 25px;
+    resize: none;
+    color: #FB6FE2bb;
+    font-size: 1.3em;
+    overflow: scroll;
+    scrollbar-width: none;
+    backdrop-filter: blur(3px);
+}
+.edit-body .edit-send{
+    border: none;
+    margin-top: 25px;
+    width: 100%;
+    height: 58px;
+    border-radius: 25px;
+    background: linear-gradient(#991789bb, #5C1693bb);
+    backdrop-filter: blur(2px);
+    color: #2B0548;
+    font-weight: bolder;
+}
+
 
 
 
