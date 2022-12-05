@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.sql.Timestamp;
 
 @Entity
 @Data
@@ -22,6 +23,6 @@ public class Thread{
     private long id;
 
     @Column private String subject;
-    @Column private Date timestamp;
+    @Column private Timestamp timestamp;
     @OneToOne User user;
 }

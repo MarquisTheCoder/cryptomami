@@ -148,3 +148,59 @@
     padding: 20px;
     color: #FB6FE2cc;
 }
+
+.make-thread-background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 80vw;
+    height: 90vh;
+}
+
+.make-thread{
+    position: absolute;
+    top: 635px;
+    left: 100px;
+    height: 50px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+}
+.threads-header img:hover{
+    cursor: pointer;
+}
+.make-thread input{
+    border: none;
+    background-color: #1F013Dbb;
+    font-size: .92em;
+    color: #FB6FE2aa;
+    padding: 5px 15px;
+    width: 70%;
+    height: 40px;
+}
+.make-thread button{
+    border: none;
+    height: 40px;
+    color: #040033aa;
+    background: linear-gradient(#991789bb, #5C1693bb);
+}
+
+.make-thread .exit{
+    font-size: 1em;
+    font-weight: bolder;
+    width: 10%;
+    color: #04003355!important;
+    border-radius: 25px 0 0 25px;
+}
+.make-thread .make-thread-button{
+    width: 20%;
+    border-radius: 0 25px 25px 0;
+}
+
+.make-thread button:hover{
+    cursor:pointer;
+    background: linear-gradient(#99178933, #5C169333);
+    color: #FB6FE255;
+}

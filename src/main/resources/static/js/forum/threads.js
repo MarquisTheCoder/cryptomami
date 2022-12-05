@@ -65,4 +65,20 @@ let globalCurrentThreadId = 0;
                .then(response => console.log(response.status))
          $("#post-content").val("")
      })
+     
+     $(".threads-header img").click(function(){
+          $(".make-thread-background").toggleClass("hide")
+     })
+     
+     $(".make-thread .make-thread-button").click(function(){
+          
+          fetch(`/threads/create/${$(".make-thread input").val()}`)
+               .then(response => console.log(response.status))
+          
+          
+     })
+     
+     $(".make-thread button").click(function(){
+          $(this).parents(".make-thread-background").toggleClass("hide")
+     })
 })();
