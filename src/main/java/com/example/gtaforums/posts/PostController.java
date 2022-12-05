@@ -1,5 +1,6 @@
 package com.example.gtaforums.posts;
 
+import com.example.gtaforums.users.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,6 +16,16 @@ public class PostController{
     @GetMapping("/create")
     public String home(){
         return "redirect:/forum";
+    }
+    @GetMapping("/edit/{id}/{content}")
+    public String editPost(@PathVariable String id,
+                           @PathVariable String content){
+        Post currentPost = postRepository.getReferenceById(Long.parseLong(id));
+        currentPost.setContent(content);
+        postRepository.save(currentPost);
+        return "redirect:/forum";
+
+
     }
     @GetMapping("/delete/{id}")
     public String deletePost(@PathVariable String id){

@@ -12,6 +12,8 @@
 		<link rel="stylesheet" href="/css/forum/forum-reply.css">
 		<link rel="stylesheet" href="/css/forum/forum-footer.css">
 		<link rel="stylesheet" href="/css/forum/pages/pages.css">
+		<link rel="stylesheet" href="/css/forum/pages/posts.css">
+		<link rel="stylesheet" href="/css/forum/pages/threads.css">
 		
 		<script src="https://code.jquery.com/jquery-3.6.1.js"
 		        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
@@ -58,7 +60,19 @@
 					</section>
 					
 					<section class="threads page inactive" style="color: white">
-						<div class="page-container"></div>
+						<div class="page-container">
+							<div class="threads-container">
+								<div class="threads">
+									<div class="threads-header">
+										<img src="/imgs/svg/posts.svg" alt="">
+									</div>
+								</div>
+								
+								<div class="post-to-thread">
+								
+								</div>
+							</div>
+						</div>
 					</section>
 					
 					<section class="posts page inactive" style="color: white">
@@ -103,8 +117,8 @@
 								<div class="edit-header">
 									<img src="/imgs/svg/edit.png" alt="">
 								</div>
-								<div class="edit-body">
-									<textarea class="content-box" name="" id="" cols="30" rows="10"></textarea>
+								<div class="edit-body hide">
+									<textarea class="content-box" data-post-id="" cols="30" rows="10"></textarea>
 									
 									<button class="edit-send">
 										Edit
