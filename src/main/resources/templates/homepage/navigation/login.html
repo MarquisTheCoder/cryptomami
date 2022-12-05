@@ -27,8 +27,8 @@
 			Wrong! try again
 		</div>
 		
-		<div th:if="${param.logout}" style="color: white">
-			You have been logged out.
+		<div class="wrong" th:if="${param.logout}" >
+			You've logged out :(
 		</div>
 		
 		<form th:action="@{/login}" th:method="post" >

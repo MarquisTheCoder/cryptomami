@@ -42,6 +42,11 @@
 						<li><button class="posts-button"><img class="nav-img"  src="/imgs/svg/camera-icon.png" alt="threads page"></button></li>
 						<li><button class="threads-button"><img class="nav-img" src="/imgs/svg/posts.svg" alt="posts page"></button></li>
 						<li><button class="stats-button"><img class="nav-img" src="/imgs/svg/stats.svg" alt="stats page"></button></li>
+						<li><form th:action="@{/logout}" th:method="post">
+							<button class="btn-link btn" style="margin-top: 8px">
+								<img class="nav-img" src="/imgs/svg/exit.svg" alt="exit">
+							</button>
+						</form></li>
 					</ul>
 				</section>
 			</nav>
