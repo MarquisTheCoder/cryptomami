@@ -13,8 +13,9 @@
 (function () {
     $(".destroy-my-post").click(function(){
          let currentPost = $(this).parents(".post")
+         let currentPostForm = $(currentPost).children("forum")
+         
          currentPost.remove();
-         let postId = currentPost.attr("data-id")
-         fetch(`/post/delete/${postId}`, { method: 'DELETE' })
+         
      })
 })();

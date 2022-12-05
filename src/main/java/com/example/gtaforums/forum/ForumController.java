@@ -30,6 +30,7 @@ public class ForumController {
     private String forum(Model model){
         User loggedInUser = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         User thisUser = userRepository.getReferenceById(loggedInUser.getId());
+
         model.addAttribute("post", new Post());
         model.addAttribute("user", thisUser);
         model.addAttribute("allposts", postRepository.findAll());
