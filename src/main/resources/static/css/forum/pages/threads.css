@@ -35,8 +35,48 @@
     right: 69px;
     width: 800px;
     height: 550px;
-
+    padding: 25px;
     background-color: #1F013D66;
     border-radius: 30px;
     box-shadow: 0 2px 8px -2px #5A2F5866;
+}
+.thread-posts{
+    width: 100%;
+    height: 400px;
+    background-color: #04003333;
+    border-radius: 30px;
+}
+
+.thread{
+    padding: 0 20px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    background: linear-gradient(#1F013D88, #2B054899);
+    justify-content: space-between;
+}
+.thread:hover{
+    cursor: pointer;
+    background: linear-gradient(#1F0D8822, #5A2F5855);
+}
+.thread img{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+}
+
+.thread h5{
+    font-size: 1.2em;
+}
+
+.add-post img{
+    height: 35px;
+    width: 35px;
+    filter: invert(23%) sepia(100%) saturate(2077%) hue-rotate(285deg) brightness(88%) contrast(82%);
+    opacity: .9;
+}
+.add-post img:hover{
+    filter: invert(25%) sepia(87%) saturate(3297%) hue-rotate(281deg) brightness(97%) contrast(122%);
 }

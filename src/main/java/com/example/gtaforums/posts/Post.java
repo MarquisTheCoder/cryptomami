@@ -30,9 +30,9 @@ public class Post {
 
     @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "thread_id")
-    Thread parent_thread;
+    Thread parentThread;
 
     @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "parent_post_id")
-    Post parent_post;
+    Post parentPost;
 }

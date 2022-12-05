@@ -3,6 +3,7 @@ package com.example.gtaforums.forum;
 import com.example.gtaforums.posts.Post;
 import com.example.gtaforums.posts.PostJson;
 import com.example.gtaforums.posts.PostRepository;
+import com.example.gtaforums.threads.ThreadRepository;
 import com.example.gtaforums.users.User;
 import com.example.gtaforums.users.UserRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -25,7 +26,7 @@ public class ForumController {
 
     @Autowired private PostRepository postRepository;
     @Autowired private UserRepository userRepository;
-
+    @Autowired private ThreadRepository threadRepository;
     @GetMapping()
     private String forum(Model model){
         User loggedInUser = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
@@ -35,6 +36,8 @@ public class ForumController {
         model.addAttribute("user", thisUser);
         model.addAttribute("allposts", postRepository.findAll());
         model.addAttribute("myPosts", postRepository.findPostsByUser(thisUser));
+
+        model.addAttribute("threadPosts", threadRepository.findAll());
         return "forum/forum";
     }
 
@@ -90,7 +93,7 @@ public class ForumController {
 
         //creates a post object and saves the reply post to the database with a hardcoded user
         Post replyPost = Post.builder()
-                .parent_post(postRepository.getReferenceById(Long.parseLong(id)))
+                .parentPost(postRepository.getReferenceById(Long.parseLong(id)))
                 .user(userRepository.findAll().get(0))
                 .timestamp(new Timestamp(date.getTime()))
                 .content(content)

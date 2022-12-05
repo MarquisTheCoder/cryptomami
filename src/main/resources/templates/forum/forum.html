@@ -66,10 +66,28 @@
 									<div class="threads-header">
 										<img src="/imgs/svg/posts.svg" alt="">
 									</div>
+									<div class="thread" th:each="thread : ${threadPosts}">
+										<div style="display: flex; gap: 15px; align-items: center">
+											<img th:src="${thread.getUser().getProfileImg()}" alt="">
+											<h5 th:text="${thread.getUser().getUsername()}"></h5>
+											<p th:text="${thread.getSubject()}"></p>
+										</div>
+										
+										<div class="add-post">
+											<img class="add-post-button" src="/imgs/svg/plus-sign.png" alt="">
+										</div>
+										
+									</div
+									>
 								</div>
 								
 								<div class="post-to-thread">
-								
+									<div class="thread-posts">
+										sdfsdfgsdfgdf
+									</div>
+									<div class="thread-post-send">
+									
+									</div>
 								</div>
 							</div>
 						</div>
