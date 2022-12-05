@@ -80,3 +80,11 @@
 .add-post img:hover{
     filter: invert(25%) sepia(87%) saturate(3297%) hue-rotate(281deg) brightness(97%) contrast(122%);
 }
+
+.thread-send-post{
+    margin-top: 30px;
+    width: 100%;
+    height: 50px;
+    background-color: red;
+    border-radius: 30px;
+}
