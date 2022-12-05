@@ -13,9 +13,11 @@
 (function () {
     $(".destroy-my-post").click(function(){
          let currentPost = $(this).parents(".post")
-         let currentPostForm = $(currentPost).children("forum")
-         
+         let postId = currentPost.attr("data-id")
          currentPost.remove();
-         
+         console.log(postId)
+         fetch(`/post/delete/${postId}`)
+          .then(response => response.json())
+          .then(json => console.log(json))
      })
 })();

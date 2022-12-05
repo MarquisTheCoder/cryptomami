@@ -16,8 +16,9 @@ public class PostController{
     public String home(){
         return "redirect:/forum";
     }
-    @PostMapping("/delete/{id}")
+    @GetMapping("/delete/{id}")
     public String deletePost(@PathVariable String id){
+//        Post currentPost = postRepository.getReferenceById(Long.parseLong(id));
         postRepository.deleteById(Long.parseLong(id));
         return "redirect:/forum";
     }
