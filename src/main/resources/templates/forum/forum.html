@@ -48,7 +48,7 @@
 		
 		</header>
 		
-		<main class="global-state-container">
+		<main class="global-state-container" th:data-user-id="${user.getId()}" th:data-username="${username}" th:data-profileImg="${profileImg}">
 				<section class="root-container">
 					
 					<section class="home page inactive" style="color: white ">
@@ -66,7 +66,9 @@
 									<div class="threads-header">
 										<img src="/imgs/svg/posts.svg" alt="">
 									</div>
-									<div class="thread" th:each="thread : ${threadPosts}">
+									<div class="thread" th:data-user-id="${user.getId()}"
+									     th:data-thread-id="${thread.getId()}"
+									     th:each="thread : ${threadPosts}">
 										<div style="display: flex; gap: 15px; align-items: center">
 											<img th:src="${thread.getUser().getProfileImg()}" alt="">
 											<h5 th:text="${thread.getUser().getUsername()}"></h5>
@@ -85,11 +87,15 @@
 								
 								<div class="post-to-thread">
 									<div class="thread-posts">
-										sdfsdfgsdfgdf
+									
 									</div>
 									<div class="thread-send-post">
-										<input type="text">
-										<button>Send Post</button>
+										<input id="post-content" type="text">
+										<button id="send-post"
+										        th:data-user-id="${user.getId()}"
+										        th:data-username="${username}"
+										        th:data-profileImg="${profileImg}" >
+											Send Post</button>
 									</div>
 								</div>
 							</div>
@@ -106,7 +112,7 @@
 									
 								</div>
 								<div class="my-post-body">
-									<div th:each="post : ${allposts}">
+									<div th:each="post : ${myPosts}">
 										<div class="post" th:data-id="${post.getId()}">
 											<div class="user-info">
 												<div class="left">
@@ -161,5 +167,6 @@
 		<script src="/js/forum/state-manager/ForumStateManager.js"></script>
 		<script src="/js/forum/state-manager/navigation-handler.js"></script>
 		<script src="/js/forum/posts.js"></script>
+		<script src="/js/forum/threads.js"></script>
 	</body>
 </html>

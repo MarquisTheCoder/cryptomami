@@ -11,9 +11,26 @@ public class PostJson {
     private String title;
     private String content;
     private Timestamp timestamp;
-
+    private String profileImg;
+    private String username;
     public long getId() {
         return id;
+    }
+
+    public String getProfileImg() {
+        return profileImg;
+    }
+
+    public void setProfileImg(String profileImg) {
+        this.profileImg = profileImg;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public void setId(long id) {

@@ -34,6 +34,8 @@ public class ForumController {
 
         model.addAttribute("post", new Post());
         model.addAttribute("user", thisUser);
+        model.addAttribute("username", thisUser.getUsername());
+        model.addAttribute("profileImg", thisUser.getProfileImg());
         model.addAttribute("allposts", postRepository.findAll());
         model.addAttribute("myPosts", postRepository.findPostsByUser(thisUser));
 
@@ -69,10 +71,11 @@ public class ForumController {
         //mapper
         children.forEach(child ->{
            PostJson post = PostJson.builder()
-                   .parentId(Long.parseLong(id))
                    .content(child.getContent())
                    .id(child.getId())
                    .timestamp(child.getTimestamp())
+                   .profileImg(child.getUser().getProfileImg())
+                   .username(child.getUser().getUsername())
                    .build();
            childArray.add(post);
         });

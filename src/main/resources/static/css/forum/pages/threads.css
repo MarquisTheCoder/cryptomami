@@ -9,7 +9,7 @@
 
     max-width: 700px;
     max-height: 550px;
-    background-color: #1F013D66;
+    background-color: #1F013D33;
     border-radius: 30px;
     box-shadow: 0 2px 8px -2px #5A2F5866;
     overflow: hidden;
@@ -43,6 +43,8 @@
 .thread-posts{
     width: 100%;
     height: 400px;
+    max-height: 400px;
+    overflow: scroll;
     background-color: #04003333;
     border-radius: 30px;
 }
@@ -82,9 +84,67 @@
 }
 
 .thread-send-post{
+    padding: 5px 10px;
+    display: flex;
     margin-top: 30px;
     width: 100%;
     height: 50px;
-    background-color: red;
+    background-color: #04003366;
     border-radius: 30px;
+    align-items: center;
+}
+
+.thread-send-post input{
+    height: 40px;
+    width: 80%;
+    border-radius: 30px 0 0 30px;
+    border: none;
+    padding: 5px 20px;
+    background-color: #1F013Dbb;
+    font-size: 1.2em;
+    color: #FB6FE2aa;
+}
+.thread-send-post button{
+    height: 40px;
+    width: 20%;
+    border-radius: 0 30px 30px 0;
+    border:none;
+    color: #040033aa;
+    background: linear-gradient(#991789bb, #5C1693bb);
+}
+
+.thread-send-post button:hover{
+    cursor:pointer;
+    background: linear-gradient(#99178933, #5C169333);
+    color: #FB6FE255;
+}
+
+.thread-posts{
+    padding: 40px;
+}
+
+.thread-post{
+    margin: 50px;
+    background-color: #04003388;
+    padding: 0;
+    border-radius: 25px;
+    box-shadow: 0 2px 8px -2px #1F013Ddd;
+}
+.user-info{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background-color: #040033e7;
+    border-radius: 30px 30px 0 0;
+    align-items: center;
+}
+.user-info img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.thread-posts-content{
+    padding: 20px;
+    color: #FB6FE2cc;
 }
