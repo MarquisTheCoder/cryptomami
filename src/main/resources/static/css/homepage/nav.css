@@ -2,7 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Source+Sans+Pro:wght@900&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -13,9 +13,9 @@
 
 nav{
     font-family: 'Source Sans Pro', sans-serif;
-    box-shadow: 0 2px 8px -2px #FA8CFCaa;
     justify-content: space-between;
-    background-color: #060043dd;
+    background: linear-gradient(#060043dd, #06004377);
+    backdrop-filter: blur(15px);
     align-content: center;
     align-items: center;
     margin-bottom: 40px;
@@ -25,10 +25,11 @@ nav{
 }
 
 nav li a{
-    font-family: 'Press Start 2P', cursive;
+
+    font-family: 'Source Sans Pro', sans-serif;
     text-decoration: none;
-    font-size: 1.2em;
-    color: #7D1469;
+    font-size: 1.5em;
+    color: #B535AF77;
 }
 
 nav li a:hover{
@@ -50,10 +51,10 @@ nav ul{
 }
 
 nav #nav-icon{
-    font-family: 'Press Start 2P', cursive;
-    font-size: 1.4em;
-    font-weight: 600;
-    color: #FB6FE2;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2em;
+    font-weight: 900;
+    color: #FB6FE2b7;
 }
 
 nav #login-button{
@@ -61,7 +62,6 @@ nav #login-button{
 }
 
 #login-button{
-    font-family: 'Press Start 2P', cursive;
     background-color: transparent;
     border: 2px solid #5A2F58;
     padding: 10px 20px;
