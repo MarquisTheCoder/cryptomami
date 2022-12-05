@@ -71,11 +71,8 @@ let globalCurrentThreadId = 0;
      })
      
      $(".make-thread .make-thread-button").click(function(){
-          
           fetch(`/threads/create/${$(".make-thread input").val()}`)
                .then(response => console.log(response.status))
-          
-          
      })
      
      $(".make-thread button").click(function(){
