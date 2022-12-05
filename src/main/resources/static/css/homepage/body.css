@@ -23,6 +23,7 @@ body{
     height: auto;
     color: #E2DBFFDE;
     box-shadow: 0px 10px 39px 4px rgba(0,0,0,0.6);
+    border-radius: 25px;
 }
 
 .main-button{
