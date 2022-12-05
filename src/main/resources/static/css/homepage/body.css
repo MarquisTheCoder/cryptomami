@@ -5,6 +5,7 @@ body{
     background: url("../../imgs/aesthetic backgroun.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    backdrop-filter: blur(30px);
     width: 100vw;
     height: 100vh;
 }
@@ -17,13 +18,11 @@ body{
     background-color: #1F013D99;
     backdrop-filter: blur(4px);
     padding: 40px 40px;
-    margin: 6vh 10vw;
+    margin: 5vh 5vw;
     width: 34vw;
     height: auto;
     color: #E2DBFFDE;
-    box-shadow: 0px 9px 144px 21px rgba(0,0,0,1);
-    -webkit-box-shadow: 0px 9px 144px 21px rgba(0,0,0,1);
-    -moz-box-shadow: 0px 9px 144px 21px rgba(0,0,0,1);
+    box-shadow: 0px 10px 39px 4px rgba(0,0,0,0.6);
 }
 
 .main-button{
@@ -57,4 +56,15 @@ body{
     backdrop-filter: blur(8px);
     color: #B535AF;
     border-color: #B535AF;
+}
+a{
+    text-decoration: none;
+}
+
+.dashboard-img{
+    margin-right: 75px;
+    margin-bottom: 50px;
+    width: 800px;
+    height: auto;
+    border-radius: 25px;
 }

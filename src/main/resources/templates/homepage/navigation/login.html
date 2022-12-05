@@ -23,8 +23,8 @@
 <main>
 	<section class="form-container">
 		
-		<div th:if="${param.error}" style="color: white">
-			Invalid Username and Password.
+		<div class="wrong" th:if="${param.error}" >
+			Wrong! try again
 		</div>
 		
 		<div th:if="${param.logout}" style="color: white">
