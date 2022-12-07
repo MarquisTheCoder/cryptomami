@@ -12,7 +12,7 @@
 
 (function () {
      //making sure the starting page is the homepage
-     globalForumStateManager.active("threads")
+     globalForumStateManager.active("home")
      
      //iterating through all selected page option and altering global state based on click
      function createEventListenersForPage(pageList){

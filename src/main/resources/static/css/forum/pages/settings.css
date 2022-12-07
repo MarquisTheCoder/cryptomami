@@ -1,0 +1,70 @@
+
+.settings-container{
+    position: relative;
+}
+
+.settings-container .edit-profile-img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    box-shadow: 0 2px 20px -2px #FA8CFCaa;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.settings-container .pro-img{
+    height: 200px;
+    width: 200px;
+    transition: all ease .2s;
+}
+
+.settings-container .change{
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    position: absolute;
+    top: 100%;
+    transition: all ease .2s;
+    height: 50%;
+    width: 100%;
+    background-color: #04003344;
+    color: #FFcFE299;
+}
+
+.settings-container .edit-profile-img:hover .change{
+    top: 70%;
+
+}
+.settings-container .edit-profile-img:hover img{
+    transform: scale(1.25);
+}
+
+.settings-container .username-change{
+    margin-top: 40px;
+    padding: 5px 15px;
+    border-radius: 25px;
+    width: 200px;
+    height: 40px;
+    font-size: 1.3em;
+    border: none;
+    background-color: #1F013D;
+    color: #FB6FE288;
+}
+
+.settings-container .username-update{
+    height: 40px;
+    width: 90px;
+    border-radius: 25px;
+    border: none;
+    font-size: 1.3em;
+    padding: 5px 15px;
+    background: linear-gradient(#991789bb, #5C1693bb);
+    color: #ffffff66;
+}
+
+.settings-container .username-update:hover{
+    background: linear-gradient(#99178933, #5C169333);
+    color: #FB6FE277;
+    cursor: pointer;
+}

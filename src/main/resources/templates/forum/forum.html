@@ -14,6 +14,7 @@
 		<link rel="stylesheet" href="/css/forum/pages/pages.css">
 		<link rel="stylesheet" href="/css/forum/pages/posts.css">
 		<link rel="stylesheet" href="/css/forum/pages/threads.css">
+		<link rel="stylesheet" href="/css/forum/pages/settings.css">
 		
 		<script src="https://code.jquery.com/jquery-3.6.1.js"
 		        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
@@ -38,10 +39,8 @@
 				<section class="nav-main-links item">
 					<ul>
 						<li><button class="home-button"><img class="nav-img" src="/imgs/svg/home.svg" alt="home page"></button></li>
-						<li><button class="settings-button"><img class="nav-img" src="/imgs/svg/settings.svg" alt="settings page"></button></li>
 						<li><button class="posts-button"><img class="nav-img"  src="/imgs/svg/camera-icon.png" alt="threads page"></button></li>
 						<li><button class="threads-button"><img class="nav-img" src="/imgs/svg/posts.svg" alt="posts page"></button></li>
-						<li><button class="stats-button"><img class="nav-img" src="/imgs/svg/stats.svg" alt="stats page"></button></li>
 						<li><form th:action="@{/logout}" th:method="post">
 							<button class="btn-link btn" style="margin-top: 8px">
 								<img class="nav-img" src="/imgs/svg/exit.svg" alt="exit">
@@ -56,12 +55,25 @@
 		<main class="global-state-container" th:data-user-id="${user.getId()}" th:data-username="${username}" th:data-profileImg="${profileImg}">
 				<section class="root-container">
 					
-					<section class="home page inactive" style="color: white ">
-						<div class="page-container"></div>
-					</section>
 					
-					<section class="settings page inactive"  style="color: white">
-						<div class="page-container"></div>
+					<section class="home page inactive"  style="color: white">
+						<div class="page-container">
+							<div class="settings-container">
+								<div class="edit-profile-img">
+									<img class="pro-img" th:src="${user.getProfileImg()}" alt="">
+									<div class="change">
+										change
+									</div>
+								</div>
+								<div>
+									
+									<input class="username-change" type="text" th:placeholder="${user.getUsername()}">
+									<button class="username-update">update</button>
+									
+								</div>
+								
+							</div>
+						</div>
 					</section>
 					
 					<section class="threads page inactive" style="color: white">

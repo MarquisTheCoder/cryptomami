@@ -70,6 +70,7 @@ public class ForumController {
         //can be mapped and converted correctly by the jackson object
         //mapper
         children.forEach(child ->{
+
            PostJson post = PostJson.builder()
                    .content(child.getContent())
                    .id(child.getId())
@@ -78,6 +79,7 @@ public class ForumController {
                    .username(child.getUser().getUsername())
                    .build();
            childArray.add(post);
+
         });
 
         //object mapper turns the current PostJson object into a json object
