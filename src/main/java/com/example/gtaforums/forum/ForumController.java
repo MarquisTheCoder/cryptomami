@@ -69,6 +69,7 @@ public class ForumController {
         //converts the Post Entity into a PostJson object and so it
         //can be mapped and converted correctly by the jackson object
         //mapper
+
         children.forEach(child ->{
 
            PostJson post = PostJson.builder()
@@ -78,8 +79,8 @@ public class ForumController {
                    .profileImg(child.getUser().getProfileImg())
                    .username(child.getUser().getUsername())
                    .build();
-           childArray.add(post);
 
+           childArray.add(post);
         });
 
         //object mapper turns the current PostJson object into a json object

@@ -44,6 +44,7 @@ public class ThreadController {
         List<PostJson> postJsons = new ArrayList<>();
 
         for(Post post : childPosts){
+
             PostJson postJson = PostJson.builder()
                     .content(post.getContent())
                     .id(post.getId())
