@@ -24,7 +24,6 @@ import java.util.List;
 @Controller
 @RequestMapping("/threads")
 public class ThreadController {
-
     private final ThreadRepository threadRepository;
     private final PostRepository postRepository;
     private final UserRepository userRepository;
