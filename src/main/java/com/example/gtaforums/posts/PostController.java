@@ -26,6 +26,7 @@ public class PostController{
         this.postRepository = postRepository;
         this.threadRepository = threadRepository;
     }
+    
     @GetMapping("/create/{userId}/{threadId}/{content}")
     public String createPost(@PathVariable String userId,
                              @PathVariable String threadId,
