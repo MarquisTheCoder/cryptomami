@@ -23,7 +23,7 @@ import java.util.Date;
 @Controller
 @RequestMapping("/forum")
 public class ForumController {
-
+    
     @Autowired private PostRepository postRepository;
     @Autowired private UserRepository userRepository;
     @Autowired private ThreadRepository threadRepository;
@@ -96,7 +96,6 @@ public class ForumController {
                         @PathVariable String id){
 
         Date date = new Date();
-
         //creates a post object and saves the reply post to the database with a hardcoded user
         Post replyPost = Post.builder()
                 .parentPost(postRepository.getReferenceById(Long.parseLong(id)))
